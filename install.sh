@@ -62,3 +62,15 @@ then
 else
   echo -e $CYAN"### Exa bin already exists, skipping!"$RESET
 fi
+
+
+# ZSH 
+# TODO fix installation option
+sudo apt install zsh
+sudo apt-get install zsh-syntax-highlighting
+sudo apt-get install powerline fonts-powerline
+sudo apt-get install zsh-theme-powerlevel9k
+
+sh -c "$(wget --no-check-certificate https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+
