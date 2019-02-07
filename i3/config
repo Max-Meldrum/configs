@@ -57,7 +57,7 @@ gaps inner 20
 gaps outer 10
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale --no-xinerama /home/meldrum/Pictures/wall.jpg --bg-scale --no-xinerama /home/meldrum/Pictures/wall.jpg
+exec --no-startup-id feh --bg-scale --no-xinerama /home/meldrum/Pictures/primary.jpg --bg-scale --no-xinerama /home/meldrum/Pictures/second.jpg
 
 # Touchpad
 exec --no-startup-id xinput set-prop 12 "libinput Tapping Enabled" 1
@@ -66,10 +66,9 @@ exec --no-startup-id xinput set-prop 12 "libinput Tapping Enabled" 1
 exec --no-startup-id compton --config ~/.compton.conf
 
 # Screen
-exec --no-startup-id xrandr --output DP-1-8 -auto --right-of eDP-1
+exec --no-startup-id xrandr --output DP-1-8 -auto --right-of eDP-1 --brightness 1.0
 
 # Workspaces
-
 set $workspace1 "1 browsing"
 set $workspace2 "2 code"
 set $workspace3 "3 casual"
@@ -82,3 +81,8 @@ bindsym $mod+3 workspace $workspace3
 bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
+
+
+# Brightlight
+bindsym XF86MonBrightnessUp exec brightlight -i 60
+bindsym XF86MonBrightnessDown exec brightlight -d 60
