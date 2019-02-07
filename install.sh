@@ -70,7 +70,15 @@ sudo apt install zsh
 sudo apt-get install zsh-syntax-highlighting
 sudo apt-get install powerline fonts-powerline
 sudo apt-get install zsh-theme-powerlevel9k
-
 sh -c "$(wget --no-check-certificate https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+# FZF
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
+# Compton
+sudo apt install compton
+
+function cli_tools() {
+  echo "hej"
+}
