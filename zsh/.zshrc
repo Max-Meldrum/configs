@@ -1,6 +1,6 @@
-export ZSH="/home/meldrum/.oh-my-zsh"
-
+export ZSH="/home/meldrum/.oh-my-zsh" 
 ZSH_THEME="robbyrussell"
+
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(git)
@@ -20,3 +20,23 @@ ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 RPROMPT='$(git_prompt_status)%{$reset_color%}'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Qt
+export PATH="$HOME/Qt5.11.3/5.11.3/:${PATH}"
+
+# Android
+export ANDROID_HOME=$HOME/android-sdk
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/home/meldrum/android-ndk-r16b
+export ANDROID_NDK_ROOT=$HOME/android-ndk-r16b
+
+
+export PROMPT_COMMAND="pwd > /tmp/whereami"
+precmd() { eval "$PROMPT_COMMAND" }
