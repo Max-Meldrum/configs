@@ -27,16 +27,5 @@ RPROMPT='$(git_prompt_status)%{$reset_color%}'
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Qt
-export PATH="$HOME/Qt5.11.3/5.11.3/:${PATH}"
-
-# Android
-export ANDROID_HOME=$HOME/android-sdk
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:/home/meldrum/android-ndk-r16b
-export ANDROID_NDK_ROOT=$HOME/android-ndk-r16b
-
-
 export PROMPT_COMMAND="pwd > /tmp/whereami"
 precmd() { eval "$PROMPT_COMMAND" }
