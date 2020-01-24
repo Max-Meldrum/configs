@@ -22,6 +22,7 @@ Plugin 'racer-rust/vim-racer'
 " Theme/Style
 Plugin 'flazz/vim-colorschemes'
 Plugin 'KeitaNakamura/neodark.vim'
+Plugin 'sbdchd/neoformat'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -61,6 +62,8 @@ inoremap <BS> <Nop>
 " Disable HL
 noremap h <NOP>
 noremap l <NOP>
+" Use cargo fmt with +
+nnoremap <silent> + :Neoformat<CR>
 
 " Set Proper Tabs
 set tabstop=4
